@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group 2 - Index</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { color: #333; line-height: 1.6; overflow-x: hidden; }
+
+    /* Background */
+    .wallpaper-container {
+      position: fixed; inset: 0; z-index: -1;
+    }
+    .wallpaper-container::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('image/wallpaper.jpg') center/cover no-repeat;
+      opacity: 0.7;
+      filter: blur(3px);
+    }
+
+    /* Overlay */
+    .content-overlay { background: rgba(255,255,255,0.9); min-height: 100vh; }
+
+    /* Navigation */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 32px;
+      background: rgba(255,255,255,0.75);
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(6px);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #2c3e50; text-decoration: none; }
+    .logo img { height: 60px; }
+    .nav-links { display: flex; list-style: none; gap: 22px; }
+    .nav-links a { text-decoration: none; color: #2c3e50; font-weight: 600; font-size: 16px; padding: 6px 10px; border-radius: 6px; transition: 0.3s; }
+    .nav-links a:hover { background: #3498db; color: #fff; }
+
+    /* Main content */
+    .main-content { display: flex; justify-content: center; padding: 60px 20px; }
+    .image-container { max-width: 1200px; width: 95%; background: #fff; border-radius: 14px; box-shadow: 0 12px 35px rgba(0,0,0,0.3); overflow: hidden; }
+    .image-container img { width: 100%; display: block; }
+
+    footer { background: #eef0f2; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <div class="wallpaper-container"></div>
+  <div class="content-overlay">
+
+    <!-- NAV -->
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="../image/grp2.png" alt="Group 2 Logo">
+        <span>Group 2</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="peta1.html">Peta 1</a></li>
+        <li><a href="peta2.html">Peta 2</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div class="main-content">
+      <div class="image-container">
+        <img src="../image/wallpaper.jpg" alt="Wallpaper">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
